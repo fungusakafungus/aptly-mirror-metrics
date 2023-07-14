@@ -18,7 +18,7 @@ aptly_mirror_source_timestamp_seconds{archive_root="http://ftp.tu-chemnitz.de/pu
 # TYPE aptly_metric_collection_failed gauge
 aptly_metric_collection_failed 0
 ```
-It will produce the prometheus text format which is suitable for consuption with node-exporter's textfile collector:
+It will produce the prometheus text format which is suitable for consumption with node-exporter's textfile collector:
 ```shell-session
 $ node-exporter --collector.textfile.directory /var/lib/prometheus/node-exporter &
 $ curl -s localhost:9100/metrics | grep aptly_mirror
